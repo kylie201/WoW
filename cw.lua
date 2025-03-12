@@ -2,10 +2,28 @@ local Players = game:GetService("Players")
 local AnalyticsService = game:GetService("RbxAnalyticsService")
 local player = Players.LocalPlayer
 
-local WhitelistedClientIDs = {
-    "CEE26742-23B4-4189-B347-07C7DA28AB31",
-    "YYYYYYYY-YYYY-YYYY-YYYY-YYYYYYYYYYYY"
-}
+local clientIdsUrl = "https://raw.githubusercontent.com/YourGitHubUsername/YourRepo/main/clientids.lua"
+
+local WhitelistedClientIDs = {}
+
+local success, response = pcall(function()
+    return game:HttpGet(clientIdsUrl)
+end)
+
+if success and response then
+    local loadSuccess, clientIds = pcall(function()
+        return loadstring(response)()
+    end)
+    
+    if loadSuccess and type(clientIds) == "table" then
+        WhitelistedClientIDs = clientIds
+        print("Client IDs loaded successfully: " .. #WhitelistedClientIDs .. " IDs")
+    else
+        print("Failed to load client IDs list")
+    end
+else
+    print("Failed to fetch client IDs from URL")
+end
 
 local function isClientIDWhitelisted(clientID)
     for _, id in ipairs(WhitelistedClientIDs) do

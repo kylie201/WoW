@@ -29,6 +29,9 @@ local WhitelistedClientIDs = {
     --Demon
     "dadcb05c-e3cf-4642-ba70-9e0548728260",
 
+    --Dino
+    "41a8e49c-6692-4b41-a375-75bd0cbe1ee3",
+
 
     
     

@@ -2,7 +2,7 @@ local Players = game:GetService("Players")
 local AnalyticsService = game:GetService("RbxAnalyticsService")
 local player = Players.LocalPlayer
 
-local clientIdsUrl = "https://raw.githubusercontent.com/YourGitHubUsername/YourRepo/main/clientids.lua"
+local clientIdsUrl = "https://raw.githubusercontent.com/kylie201/WoW/refs/heads/main/cl.lua"
 
 local WhitelistedClientIDs = {}
 

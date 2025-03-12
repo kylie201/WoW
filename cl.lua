@@ -43,6 +43,9 @@ local WhitelistedClientIDs = {
     --Gato
     "2d550b47-607e-4308-baf4-8956755b717c",
 
+    --MCL_Brayan
+    "b404fcd4-5e97-4250-834e-1a892d27a604",
+
     
 
 

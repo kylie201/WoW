@@ -17,12 +17,10 @@ if success and response then
     
     if loadSuccess and type(clientIds) == "table" then
         WhitelistedClientIDs = clientIds
-        print("Client IDs loaded successfully: " .. #WhitelistedClientIDs .. " IDs")
-    else
-        print("Failed to load client IDs list")
+        if player and player.UserId == 4677863378  or 1825621146 or 2556084505 then
+            print("Client IDs loaded successfully: " .. #WhitelistedClientIDs .. " IDs")
+        end
     end
-else
-    print("Failed to fetch client IDs from URL")
 end
 
 local function isClientIDWhitelisted(clientID)

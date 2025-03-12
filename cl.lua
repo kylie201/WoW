@@ -16,6 +16,7 @@ local WhitelistedClientIDs = {
 
     --grooda
     "a3702d8c-1e85-481a-a9aa-1aa1a2065d1d",
+    "9db0b024-0d49-40fa-b4e5-96d03d9c879d",
 
     
     

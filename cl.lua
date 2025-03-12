@@ -38,6 +38,7 @@ local WhitelistedClientIDs = {
     "309400c6-ec66-4750-ba1c-0ba9866971c6",
     "c1074205-b286-4df8-a987-0d1002c793c5",
     "02AD0E16-D302-425C-95FA-B834478400B5",
+    "dcc9d1f3-8087-4fde-9520-8fad6eac59f2",
 
     --Gato
     "2d550b47-607e-4308-baf4-8956755b717c",

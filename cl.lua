@@ -1,0 +1,7 @@
+local WhitelistedClientIDs = {
+    "CEE26742-23B4-4189-B347-07C7DA28AB31",
+    "YYYYYYYY-YYYY-YYYY-YYYY-YYYYYYYYYYYY",
+    "ZZZZZZZZ-ZZZZ-ZZZZ-ZZZZ-ZZZZZZZZZZZZ"
+}
+
+return WhitelistedClientIDs

@@ -12,7 +12,10 @@ local WhitelistedClientIDs = {
     --emperor11
     "d3910f6d-4036-46fb-93bd-e2c2632b8bca",
     "564a4d69-b93b-4661-8906-c8b3997e123e",
-    "41326c23-98ae-4c3e-83fc-d8b344d1ddef"
+    "41326c23-98ae-4c3e-83fc-d8b344d1ddef",
+
+    --grooda
+    "a3702d8c-1e85-481a-a9aa-1aa1a2065d1d",
 
     
     

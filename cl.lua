@@ -23,6 +23,7 @@ local WhitelistedClientIDs = {
 
     --Raul
     "309400c6-ec66-4750-ba1c-0ba9866971c6",
+    "c7a7fe2f-790d-4333-8707-11f44ef27cc8",
 
     --Manny
     "06e49a0e-0303-45bb-8d6a-345c110cec43",

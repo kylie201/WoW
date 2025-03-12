@@ -9,6 +9,7 @@ local WhitelistedClientIDs = {
 
     --kitkat
     "dea346ad-ec63-49a4-9655-2cef018892c7",
+    "988db681-b23b-450f-952d-111ab894345c",
 
     --emperor11
     "d3910f6d-4036-46fb-93bd-e2c2632b8bca",

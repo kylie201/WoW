@@ -2,7 +2,7 @@ local Players = game:GetService("Players")
 local AnalyticsService = game:GetService("RbxAnalyticsService")
 local player = Players.LocalPlayer
 
-local clientIdsUrl = "https://raw.githubusercontent.com/kylie201/WoW/refs/heads/main/cl.lua"
+local clientIdsUrl = "https://raw.githubusercontent.com/YourGitHubUsername/YourRepo/main/clientids.lua"
 
 local WhitelistedClientIDs = {}
 
@@ -17,7 +17,7 @@ if success and response then
     
     if loadSuccess and type(clientIds) == "table" then
         WhitelistedClientIDs = clientIds
-        if player and player.UserId == 4677863378  or 1825621146 or 2556084505 then
+        if player and player.UserId == 4677863378 then
             print("Client IDs loaded successfully: " .. #WhitelistedClientIDs .. " IDs")
         end
     end
@@ -51,17 +51,10 @@ local function verifyClientIDWhitelist()
     return isClientIDWhitelisted(clientID), clientID
 end
 
-local function copyClientIDToClipboard()
-    local clientID = getClientID()
-    setclipboard(clientID)
-    return clientID
-end
-
 local ClientIDWhitelist = {
     verifyWhitelist = verifyClientIDWhitelist,
     getClientID = getClientID,
-    isClientIDWhitelisted = isClientIDWhitelisted,
-    copyClientIDToClipboard = copyClientIDToClipboard
+    isClientIDWhitelisted = isClientIDWhitelisted
 }
 
 _G.ClientIDWhitelist = ClientIDWhitelist

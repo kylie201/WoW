@@ -1,22 +1,22 @@
 local WhitelistedClientIDs = {
 
-    --brandon
+    --Brandon
     "CEE26742-23B4-4189-B347-07C7DA28AB31",
     "871a6673-5ba4-4113-ad48-cda8891e603d",
 
-    --pase
+    --Pase
     
 
-    --kitkat
+    --Kitkat
     "dea346ad-ec63-49a4-9655-2cef018892c7",
     "988db681-b23b-450f-952d-111ab894345c",
 
-    --emperor11
+    --Emperor11
     "d3910f6d-4036-46fb-93bd-e2c2632b8bca",
     "564a4d69-b93b-4661-8906-c8b3997e123e",
     "41326c23-98ae-4c3e-83fc-d8b344d1ddef",
 
-    --grooda
+    --Grooda
     "a3702d8c-1e85-481a-a9aa-1aa1a2065d1d",
     "9db0b024-0d49-40fa-b4e5-96d03d9c879d",
     "2128fa89-bab9-4d48-af7a-3e0fc954c5f4",
@@ -36,6 +36,11 @@ local WhitelistedClientIDs = {
 
     --Brayan
     "309400c6-ec66-4750-ba1c-0ba9866971c6",
+
+    --Gato
+    "2d550b47-607e-4308-baf4-8956755b717c",
+
+    
 
 
 

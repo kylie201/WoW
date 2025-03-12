@@ -32,6 +32,10 @@ local WhitelistedClientIDs = {
     --Dino
     "41a8e49c-6692-4b41-a375-75bd0cbe1ee3",
 
+    --Brayan
+    "309400c6-ec66-4750-ba1c-0ba9866971c6",
+
+
 
     
     

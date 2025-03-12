@@ -26,6 +26,9 @@ local WhitelistedClientIDs = {
     --Manny
     "06e49a0e-0303-45bb-8d6a-345c110cec43",
 
+    --Demon
+    "dadcb05c-e3cf-4642-ba70-9e0548728260",
+
 
     
     

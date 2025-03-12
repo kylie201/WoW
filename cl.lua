@@ -1,7 +1,7 @@
 local WhitelistedClientIDs = {
 
     --brandon
-    "CEE26742-23B4-4189-B347-07C7DA28AB31",
+    --"CEE26742-23B4-4189-B347-07C7DA28AB31",
 
     --pase
     

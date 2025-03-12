@@ -2,6 +2,7 @@ local WhitelistedClientIDs = {
 
     --brandon
     "CEE26742-23B4-4189-B347-07C7DA28AB31",
+    "871a6673-5ba4-4113-ad48-cda8891e603d",
 
     --pase
     
@@ -18,6 +19,13 @@ local WhitelistedClientIDs = {
     "a3702d8c-1e85-481a-a9aa-1aa1a2065d1d",
     "9db0b024-0d49-40fa-b4e5-96d03d9c879d",
     "2128fa89-bab9-4d48-af7a-3e0fc954c5f4",
+
+    --Raul
+    "309400c6-ec66-4750-ba1c-0ba9866971c6",
+
+    --Manny
+    "06e49a0e-0303-45bb-8d6a-345c110cec43",
+
 
     
     

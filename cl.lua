@@ -1,67 +1,50 @@
-local SecureWhitelist = {}
-
-local function obfuscate(str, key)
-    local result = ""
-    for i = 1, #str do
-        local char = string.byte(str, i)
-        local keyChar = string.byte(key, (i % #key) + 1)
-        result = result .. string.char(bit.bxor(char, keyChar))
+local function h(s)
+    local r = ""
+    for i = 1, #s do
+        r = r .. string.char(string.byte(s, i) ~ 42)
     end
-    return result
+    return r
 end
 
-local secretKey = "7Hj9xP3qRm2Kl5sB"
-
-local obfuscatedIDs = {
-    -- Brandon
-    "\26\17\23\10\22\29\29\20\3\15\18\31\13\24\29\17\31\22\3\16\24\20\7\5\26\27\18\9\6\11\1\13",
-    "\19\19\0\6\12\7\25\11\15\23\22\25\5\1\27\4\17\10\15\2\22\15\19\2\26\10\16\2\30\27\6\11",
-    -- Pase
-    
-    -- Kitkat
-    "\5\17\2\30\0\9\5\25\17\19\12\13\11\3\5\15\19\27\26\1\10\23\11\28\11\23\3\21\12\7\5\9",
-    "\19\19\8\4\25\16\24\15\23\31\24\30\14\8\31\0\19\4\19\3\11\21\5\30\1\14\14\11\3\17\5\14",
-    -- Emperor11
-    "\5\27\19\0\27\6\11\4\14\30\23\13\17\6\28\15\19\1\24\4\17\10\12\28\20\28\24\21\20\12\2\2",
-    "\17\9\14\2\7\10\12\11\29\19\25\25\17\8\19\22\16\8\27\11\3\17\17\15\4\21\19\26\4\9\1\12",
-    "\3\1\12\15\14\16\1\11\19\8\5\25\11\19\6\2\16\4\18\15\5\25\21\5\17\5\29\30\14\12\7\17",
-    -- Grooda
-    "\3\11\17\27\7\10\26\14\0\17\16\30\5\7\2\11\3\19\8\8\31\0\6\1\21\4\24\9\4\27\18\15",
-    "\19\5\2\27\2\23\8\8\27\13\6\21\14\0\2\6\19\9\23\0\29\0\19\15\19\1\11\27\18\11\17\1",
-    "\5\1\8\6\22\4\24\9\29\2\21\6\14\6\4\4\3\8\4\5\20\28\27\18\12\24\26\1\4\0\7\4",
-    -- Raul
-    "\12\27\9\14\22\24\2\2\18\19\7\9\15\10\17\30\28\11\19\15\27\25\11\24\0\7\16\24\14\8\2\2",
-    "\4\17\4\21\23\13\11\21\11\31\26\27\5\9\18\0\16\18\25\3\11\21\15\21\17\14\29\21\23\8\6\4",
-    -- Manny
-    "\22\21\13\21\11\4\28\8\30\27\23\1\14\21\25\9\16\10\15\2\28\17\13\24\8\24\24\4\16\11\7\3",
-    -- Demon
-    "\5\5\10\4\28\27\18\14\18\15\4\25\14\10\0\20\25\6\17\30\5\28\17\24\12\27\29\0\20\8\3\0",
-    -- Dino
-    "\3\1\6\26\17\14\24\14\13\8\6\11\15\3\0\13\3\31\11\11\31\21\27\19\9\23\24\31\10\28\3\11",
-    -- Brayan
-    "\12\27\9\14\22\24\2\2\18\19\7\9\15\10\17\30\28\11\19\15\27\25\11\24\0\7\16\24\14\8\2\2",
-    "\4\0\27\17\14\18\30\4\28\19\7\17\5\16\28\25\3\20\16\11\27\16\26\18\11\12\23\5\25\5\8\17",
-    "\22\0\13\15\25\18\0\24\13\11\25\0\15\25\16\4\19\16\24\2\3\31\5\15\4\24\13\0\5\25\1\29",
-    "\5\4\4\19\5\0\22\11\22\27\14\9\14\6\17\10\19\16\24\0\16\19\0\22\26\27\12\10\15\5\14\16",
-    -- Gato
-    "\5\5\16\3\27\25\15\5\13\27\18\12\14\12\28\17\25\6\16\21\15\26\15\27\4\29\14\26\11\3\7\14",
-    -- MCL_Brayan
-    "\2\14\27\24\22\4\10\4\18\23\17\1\15\10\11\12\23\6\18\14\17\31\24\0\6\5\24\13\11\16\2\4"
+local WhitelistedClientIDs = {
+    h("suu~|zwv~?~#rw?w$y)?r#w|?{|s|tq~$qr#\""),
+    h("$|\"q}z|#?%rq?w\"\"#?qxw$?stq$y}\"$}~{zt"),
+    h("tuq#wzqt?us}#?w\"y%?{#\"y)?q{ww?\"y~$?o|s|"),
+    h("y)y$r$\"?v{tw?%#\"~w$){\"yw#?\"w{z?#\"|%z"),
+    h("t|y{|z}t?w{#t?z{~#?y\"zw?yx~w?~$~t?~~r"),
+    h("}o)w{o~?y)~%?}$y~~?o$~~?z$|\"?w~}%?wyr"),
+    h("c\"r%zt\"?y$%?\"y)?z~%?z}r?zw%?}%%?}w|"),
+    h("c\"||w{t?z|{?%|z{?c)$r?cy$$?{\"?~wo?w|%"),
+    h("y%r|r$?${$?|tz{?w{r}?yo{?y{\")?y\"\"$|\""),
+    h("e\"$z~wo?or~z?wzzw?c$w%?~$|$?rt~z?w{|w"),
+    h("l|)w~~r?$oy?%o~|?{{~$?\")|y%?{|w?zw$r"),
+    h("d|wt~t\"?\"#\"~|?%o$z?\"}$%?\"~%~?|w~}zw"),
+    h("}~t~\"w$?{|#\"?z{~#?yo?zt~%o?~$\"tw?~\"$|c"),
+    h("ee*w$|$?$%w%?zwc{?~{~{?%$z{?r|o{?~{$c{"),
+    h("c\"z~|zw?t$z\"?t$z\"?%c{t?c#\"\"?#~)o?#$c\""),
+    h("l|)w~~r?$oy?%o~|?{{~$?\")|y%?{|w?zw$r"),
+    h("d{|\"|zw?$o)|?%z}%?%$~%?c~{z\"?z\"r$?%%$|"),
+    h("\"}{\"%$z?{tw?t\"~%z?yz~w?yz~r?c#\"%?e%\"o"),
+    h("dwy%e{~~?~|wo?wzz|?yz~{?yztw?\"}~~?%etz"),
+    h("ee\"c|~%?%e\"t?|\"$r?zr$|?%z~\"%|?wo~z?\"c|w"),
+    h("rzoww?$#\"w?$~#\"?%o*r?~czw?|#tw{?\"\"zrw")
 }
 
-local whitelistSet = {}
-for _, obfuscatedID in ipairs(obfuscatedIDs) do
-    whitelistSet[obfuscatedID] = true
+local function formatID(id)
+    return id:gsub("[^%w]", ""):upper()
 end
 
-function SecureWhitelist.isWhitelisted(clientID)
-    clientID = string.upper(clientID)
-    clientID = string.gsub(clientID, "[-]", "")
- 
-    local obfuscatedInput = obfuscate(clientID, secretKey)
-
-    return whitelistSet[obfuscatedInput] == true
+local function isClientIDWhitelisted(clientID)
+    local formattedID = formatID(clientID)
+    local obfuscatedID = h(formattedID)
+    
+    for _, id in ipairs(WhitelistedClientIDs) do
+        if id == obfuscatedID then
+            return true
+        end
+    end
+    
+    return false
 end
 
-
-return SecureWhitelist
+return WhitelistedClientIDs
